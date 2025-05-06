@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Schedule Pickup</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; }
+    label { display: block; margin-top: 10px; }
+    input, select, textarea { width: 100%; padding: 8px; margin-top: 5px; }
+    button { padding: 10px 20px; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h2>Schedule Pickup</h2>
+  <form name="pickup" method="POST" data-netlify="true" action="/thank-you.html">
+    <input type="hidden" name="form-name" value="pickup" />
+    <label>Name:<input type="text" name="name" required></label>
+    <label>Phone:<input type="tel" name="phone" required></label>
+    <label>Email:<input type="email" name="email"></label>
+    <label>Service Type:
+      <select name="service" required>
+        <option value="">Select a service</option>
+        <option value="Junk Removal">Junk Removal</option>
+        <option value="Dumpster Drop-off (12-yard)">Dumpster Drop-off (12-yard)</option>
+        <option value="Dumpster Drop-off (16-yard)">Dumpster Drop-off (16-yard)</option>
+      </select>
+    </label>
+    <label>Pickup Address:<input type="text" name="address" required></label>
+    <label>ZIP Code:<input type="text" name="zip" maxlength="5" pattern="\d{5}" required></label>
+    <label>Requested Date:<input type="date" name="date" required></label>
+    <label>Notes:<textarea name="notes"></textarea></label>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
