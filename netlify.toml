@@ -1,0 +1,3 @@
+[build]
+  publish = "."
+  functions = ""  # override and disable default
